@@ -1,0 +1,20 @@
+# permissions for end users to view automountmaps.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: automountmap-viewer-role
+rules:
+- apiGroups:
+  - autofs.example.com.example.com
+  resources:
+  - automountmaps
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - autofs.example.com.example.com
+  resources:
+  - automountmaps/status
+  verbs:
+  - get

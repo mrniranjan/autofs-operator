@@ -2,6 +2,10 @@ domain: example.com
 layout: go.kubebuilder.io/v2
 projectName: autofs-operator
 repo: github.com/mrniranjan/autofs-operator
+resources:
+- group: autofs.example.com
+  kind: AutoMountMap
+  version: v1
 version: 3-alpha
 plugins:
   go.sdk.operatorframework.io/v2-alpha: {}
